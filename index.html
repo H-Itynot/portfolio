@@ -140,6 +140,27 @@
     margin: 0 0 28px;
   }
 
+  .about-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--rule);
+    background: linear-gradient(135deg, var(--teal-soft), #f5f0e6);
+    display: block;
+  }
+
+  .about-text {
+    min-width: 0;
+  }
+
   .about-text p {
     max-width: 62ch;
     color: var(--ink);
@@ -354,6 +375,7 @@
   }
 
   @media (max-width: 560px) {
+    .about-layout { grid-template-columns: 1fr; }
     .about-fact, .ledger-row { grid-template-columns: 1fr; gap: 4px; }
     .skills-grid { grid-template-columns: 1fr; }
     .other-projects { grid-template-columns: 1fr; }
@@ -560,32 +582,35 @@
 
   <section id="about">
     <h2 class="section-title">About</h2>
-    <div class="about-text">
-      <p>I build dashboards, clean messy datasets, and turn raw numbers into reports people actually use. My academic background in economics and mathematics gave me a grounding in statistical analysis, which I now apply to real business and admissions data. I am currently a Monitoring and Evaluation Officer at Swahilipot Hub Foundation in Mombasa.</p>
-      <p class="fun-fact">Fun fact: I find cleaning messy data oddly satisfying. I wish I felt the same way about doing the dishes.</p>
+    <div class="about-layout">
+      <img src="freshdesk.png" alt="Harriet Okabinini portrait" class="about-photo">
+      <div class="about-text">
+        <p>I build dashboards, clean messy datasets, and turn raw numbers into reports people actually use. My academic background in economics and mathematics gave me a grounding in statistical analysis, which I now apply to real business and admissions data. I am currently a Monitoring and Evaluation Officer at Swahilipot Hub Foundation in Mombasa.</p>
+        <p class="fun-fact">Fun fact: I find cleaning messy data oddly satisfying. I wish I felt the same way about doing the dishes.</p>
+        <dl class="about-facts">
+          <div class="about-fact">
+            <dt>Education</dt>
+            <dd>B.A. in Economics and Mathematics, Kenyatta University (2016 to 2021)</dd>
+          </div>
+          <div class="about-fact">
+            <dt>Certifications</dt>
+            <dd>Applied Data Science Lab, WorldQuant University (January to May 2026); Data Analysis and Professional Foundations, ALX Africa (March to October 2025); Deloitte Australia Data Analytics Job Simulation; Accenture North America Data Analytics and Visualization Job Simulation; Leadership Development and Mentorship (2018 to 2019); Special Mindset Training (February 2022)</dd>
+          </div>
+          <div class="about-fact">
+            <dt>Languages</dt>
+            <dd>English and Swahili, with elementary to working proficiency in Japanese</dd>
+          </div>
+          <div class="about-fact">
+            <dt>Focus area</dt>
+            <dd>Particularly drawn to Monitoring and Evaluation work that combines data analytics with development and NGO contexts</dd>
+          </div>
+          <div class="about-fact">
+            <dt>Elsewhere</dt>
+            <dd><a href="https://www.linkedin.com/in/harrietokabinini" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://github.com/H-Itynot?tab=repositories" target="_blank" rel="noopener">GitHub</a></dd>
+          </div>
+        </dl>
+      </div>
     </div>
-    <dl class="about-facts">
-      <div class="about-fact">
-        <dt>Education</dt>
-        <dd>B.A. in Economics and Mathematics, Kenyatta University (2016 to 2021)</dd>
-      </div>
-      <div class="about-fact">
-        <dt>Certifications</dt>
-        <dd>Applied Data Science Lab, WorldQuant University (January to May 2026); Data Analysis and Professional Foundations, ALX Africa (March to October 2025); Deloitte Australia Data Analytics Job Simulation; Accenture North America Data Analytics and Visualization Job Simulation; Leadership Development and Mentorship (2018 to 2019); Special Mindset Training (February 2022)</dd>
-      </div>
-      <div class="about-fact">
-        <dt>Languages</dt>
-        <dd>English and Swahili, with elementary to working proficiency in Japanese</dd>
-      </div>
-      <div class="about-fact">
-        <dt>Focus area</dt>
-        <dd>Particularly drawn to Monitoring and Evaluation work that combines data analytics with development and NGO contexts</dd>
-      </div>
-      <div class="about-fact">
-        <dt>Elsewhere</dt>
-        <dd><a href="https://www.linkedin.com/in/harrietokabinini" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://github.com/H-Itynot?tab=repositories" target="_blank" rel="noopener">GitHub</a></dd>
-      </div>
-    </dl>
   </section>
 
   <section id="experience">
